@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simon Game</h1>
+      <div class="scoreboard">
+        <div class="count-display" id="round">0</div>
+        <button id="start-btn">Start</button>
+        <button id="reset-btn">Reset</button>
+        <div id="fail"></div>
+      </div>
+      <div class="gameboard">
+        <div class="game-btn" id="button1"></div>
+        <div class="game-btn" id="button2"></div>
+        <div class="game-btn" id="button3"></div>
+        <div class="game-btn" id="button4"></div>
+      </div>
+    </div>
+    
+    <script src="./script/game.js" type="module"></script>
+    <script src="./script/display.js" type="module"></script>
+    <script src="./script/main.js" type="module"></script>
+  </body>
+</html>
