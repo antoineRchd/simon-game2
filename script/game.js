@@ -7,7 +7,7 @@ class SimonGame {
     this.round = 0;
   }
 
-  createNewSequence = () => {
+  creeSequence = () => {
     const lsColorSequence = [];
     const nbColors =  this.sequenceLength[this.round];
     for (let i = 0; i < nbColors; i++) {
@@ -16,7 +16,7 @@ class SimonGame {
     this.sequence = lsColorSequence;
   };
 
-  addNewValueToTheUserSequence(i) {
+  AjoutCouleurJoueurSequence(i) {
     this.userSequence.push(i);
     if (this.userSequence.length === this.sequence.length) {
       this.sequence = [];
@@ -25,15 +25,11 @@ class SimonGame {
     }
   }
 
-  getIsUserTurn() {
-    return this.isUserTurn;
-  }
-
-  alternateReadWriteMode() {
+  swapLectureEcriture() {
     this.isUserTurn = !this.isUserTurn;
   }
 
-  isSequenceAndUserSequenceEqual() {
+  SequenceJeuEtJoueurIdentique() {
     let isEqual = true;
     this.sequence.forEach((buttonIndex, i) => {
       if (buttonIndex != this.userSequence[i]) {
@@ -46,7 +42,7 @@ class SimonGame {
     return isEqual;
   }
 
-  isTheLastSequenceElementGood() {
+  laCouleurChoisiEstBonne() {
     if(!Array.isArray(this.userSequence) || !Array.isArray(this.sequence)){
         return null
     }
@@ -56,7 +52,7 @@ class SimonGame {
     );
   }
 
-  resetUserSequence() {
+  resetLejeuPourUtilisateur() {
     this.userSequence = [];
   }
 }
